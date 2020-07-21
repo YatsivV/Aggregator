@@ -458,8 +458,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Привет, Влад!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cNh-xw-GHE">
-                                <rect key="frame" x="14" y="96" width="183" height="42"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Привет,Саша!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cNh-xw-GHE">
+                                <rect key="frame" x="14" y="96" width="183" height="45.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
