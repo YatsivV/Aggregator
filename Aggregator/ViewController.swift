@@ -13,10 +13,11 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var dataEmailPlaceholder: UITextField!
     @IBOutlet weak var dataPasswodPlaceholder: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 7 // Радиус кнопки
-        // Vlad: dataEmailPlaceholder
+        // MARK: dataEmailPlaceholder
         let dataEmailPlace = UITextView.self
         dataEmailPlaceholder.delegate = self as? UITextFieldDelegate
         func dataEmailPlaceholderWasBeginEditing(_ textView: UITextView) {
@@ -36,10 +37,11 @@ class ViewController: UIViewController, UITextViewDelegate {
             textView.text = "Почта"
             dataEmailPlaceholder.textColor = UIColor.lightGray
         }
-        // Vlad: dataPasswordPlaceholder
-        let dataPasswordPlaceholder = UITextView.self
+        // MARK: dataPasswordPlaceholder
+        
+    }
+    @IBAction func buttonPressed(_ sender: Any) {
     }
 }
-
 
 
