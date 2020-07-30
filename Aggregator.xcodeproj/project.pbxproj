@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0483E10124CEF00E00C7454D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483E10024CEF00E00C7454D /* SignUpViewController.swift */; };
+		0483E10324D195FF00C7454D /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483E10224D195FF00C7454D /* ConfirmationViewController.swift */; };
 		04930F5724B9FC510086319B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04930F5624B9FC510086319B /* AppDelegate.swift */; };
 		04930F5924B9FC510086319B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04930F5824B9FC510086319B /* ViewController.swift */; };
 		04930F5C24B9FC510086319B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04930F5A24B9FC510086319B /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0483E10024CEF00E00C7454D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0483E10224D195FF00C7454D /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		04930F5324B9FC510086319B /* Aggregator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aggregator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04930F5624B9FC510086319B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04930F5824B9FC510086319B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				0483E10024CEF00E00C7454D /* SignUpViewController.swift */,
+				0483E10224D195FF00C7454D /* ConfirmationViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				0483E10124CEF00E00C7454D /* SignUpViewController.swift in Sources */,
 				04930F5924B9FC510086319B /* ViewController.swift in Sources */,
+				0483E10324D195FF00C7454D /* ConfirmationViewController.swift in Sources */,
 				04930F5724B9FC510086319B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

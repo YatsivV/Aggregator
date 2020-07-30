@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        signUpButton.layer.cornerRadius = 7 // Радиус кнопки
-        whiteMenuRectangle.layer.cornerRadius = 7
+        //signUpButton.layer.cornerRadius = 7 // Радиус кнопки
+       // whiteMenuRectangle.layer.cornerRadius = 7
     }
 }
