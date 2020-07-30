@@ -6,16 +6,14 @@
 //  Copyright © 2020 Yatts. All rights reserved.
 //
 //
-// !!!!!!!!!!!!! УБРАТЬ ScrollView из Main.storyboard, закрепить все констраинтами, на айфонах серии Х не выезжает клавиатура.
-//
-//
+
 
 import Foundation
 import UIKit
 
 class ConfirmationViewController: UIViewController, UITextViewDelegate {
     
-    @IBOutlet weak var scrollView2: UIScrollView!
+
     @IBOutlet weak var whiteMenuRectangle: UIImageView!
     @IBOutlet weak var buttonPressed: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -29,6 +27,7 @@ class ConfirmationViewController: UIViewController, UITextViewDelegate {
         whiteMenuRectangle.layer.cornerRadius = 7
     }
     
+    // MARK: UIKeyboardInsert
     deinit {
         removeKeyboardNotifications()
     }
@@ -43,17 +42,16 @@ class ConfirmationViewController: UIViewController, UITextViewDelegate {
     func removeKeyboardNotifications () {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-
     }
 
     @objc func kbWillShow(_ notification: Notification) {
-        let userInfo = notification.userInfo
-        let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        scrollView2.contentOffset = CGPoint(x: 0, y: kbFrameSize.height)
+        //let userInfo = notification.userInfo // получаем уведомление чтобы вытащить информацию
+        //let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue // узнаем размер клавиатуры
+        scrollView.contentOffset = CGPoint(x: 0, y: 220) // y: kbFrameSize.height - высота клавиатуры
     }
     
     @objc func kbWillHide() {
-        scrollView2.contentOffset = CGPoint.zero
+        scrollView.contentOffset = CGPoint.zero
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {

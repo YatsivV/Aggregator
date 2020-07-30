@@ -43,9 +43,17 @@
 			isa = PBXGroup;
 			children = (
 				0483E10024CEF00E00C7454D /* SignUpViewController.swift */,
-				0483E10224D195FF00C7454D /* ConfirmationViewController.swift */,
+				0483E10424D3210D00C7454D /* Confirmation */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		0483E10424D3210D00C7454D /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				0483E10224D195FF00C7454D /* ConfirmationViewController.swift */,
+			);
+			path = Confirmation;
 			sourceTree = "<group>";
 		};
 		04930F4A24B9FC510086319B = {
@@ -297,7 +305,9 @@
 		04930F6624B9FC520086319B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSET_PACK_MANIFEST_URL_PREFIX = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aggregator/Info.plist;
@@ -315,7 +325,9 @@
 		04930F6724B9FC520086319B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSET_PACK_MANIFEST_URL_PREFIX = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aggregator/Info.plist;
