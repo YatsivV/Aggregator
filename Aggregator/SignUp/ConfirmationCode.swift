@@ -1,27 +1,27 @@
 //
-//  ConfirmationViewController.swift
+//  ConfirmationCode.swift
 //  Aggregator
 //
-//  Created by Владислав on 29.07.2020.
+//  Created by Владислав on 02.08.2020.
 //  Copyright © 2020 Yatts. All rights reserved.
 //
-//
-
 
 import Foundation
 import UIKit
 
-class ConfirmationViewController: UIViewController, UITextViewDelegate {
+class ConfirmationCode: UIViewController, UITextViewDelegate {
     
 // MARK: IBOutlets
     
     @IBOutlet weak var whiteMenuRectangle: UIImageView!
     @IBOutlet weak var buttonPressed: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var rightTextField: UITextField!
-    @IBOutlet weak var leftTextField: UITextField!
+    @IBOutlet weak var firstTextField: UITextField!
+    @IBOutlet weak var secondTextField: UITextField!
+    @IBOutlet weak var thirdTextField: UITextField!
+    @IBOutlet weak var fourthTextField: UITextField!
     
-// MARK: viewDidLoad
+    // MARK: viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,11 +47,11 @@ class ConfirmationViewController: UIViewController, UITextViewDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
+    
     @objc func kbWillShow(_ notification: Notification) {
-        //let userInfo = notification.userInfo // получаем уведомление чтобы вытащить информацию
-        //let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue // узнаем размер клавиатуры
-        scrollView.contentOffset = CGPoint(x: 0, y: 220) // y: kbFrameSize.height - высота клавиатуры
+        let userInfo = notification.userInfo // получаем уведомление чтобы вытащить информацию
+        let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue // узнаем размер клавиатуры
+        scrollView.contentOffset = CGPoint(x: 0, y: kbFrameSize.height) // y: kbFrameSize.height - высота клавиатуры
     }
     
     @objc func kbWillHide() {
@@ -59,9 +59,11 @@ class ConfirmationViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        rightTextField.resignFirstResponder()
-        leftTextField.resignFirstResponder()
+        firstTextField.resignFirstResponder()
+        secondTextField.resignFirstResponder()
     }
+}
+
+    
     
 
-}

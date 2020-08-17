@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043560A124D6EFF3003ED1F3 /* ConfirmationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043560A024D6EFF3003ED1F3 /* ConfirmationCode.swift */; };
 		0483E10124CEF00E00C7454D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483E10024CEF00E00C7454D /* SignUpViewController.swift */; };
 		0483E10324D195FF00C7454D /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483E10224D195FF00C7454D /* ConfirmationViewController.swift */; };
 		04930F5724B9FC510086319B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04930F5624B9FC510086319B /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043560A024D6EFF3003ED1F3 /* ConfirmationCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmationCode.swift; path = Aggregator/SignUp/ConfirmationCode.swift; sourceTree = SOURCE_ROOT; };
 		0483E10024CEF00E00C7454D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0483E10224D195FF00C7454D /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		04930F5324B9FC510086319B /* Aggregator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aggregator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 		0483E10424D3210D00C7454D /* Confirmation */ = {
 			isa = PBXGroup;
 			children = (
+				043560A024D6EFF3003ED1F3 /* ConfirmationCode.swift */,
 				0483E10224D195FF00C7454D /* ConfirmationViewController.swift */,
 			);
 			path = Confirmation;
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0483E10124CEF00E00C7454D /* SignUpViewController.swift in Sources */,
+				043560A124D6EFF3003ED1F3 /* ConfirmationCode.swift in Sources */,
 				04930F5924B9FC510086319B /* ViewController.swift in Sources */,
 				0483E10324D195FF00C7454D /* ConfirmationViewController.swift in Sources */,
 				04930F5724B9FC510086319B /* AppDelegate.swift in Sources */,
