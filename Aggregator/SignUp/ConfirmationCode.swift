@@ -11,7 +11,7 @@ import UIKit
 
 class ConfirmationCode: UIViewController, UITextViewDelegate {
     
-// MARK: IBOutlets
+    // MARK: IBOutlets
     
     @IBOutlet weak var whiteMenuRectangle: UIImageView!
     @IBOutlet weak var buttonPressed: UIButton!
@@ -20,6 +20,7 @@ class ConfirmationCode: UIViewController, UITextViewDelegate {
     @IBOutlet weak var secondTextField: UITextField!
     @IBOutlet weak var thirdTextField: UITextField!
     @IBOutlet weak var fourthTextField: UITextField!
+    @IBOutlet weak var wrongCodeLabel: UILabel!
     
     // MARK: viewDidLoad
     
@@ -28,9 +29,11 @@ class ConfirmationCode: UIViewController, UITextViewDelegate {
         registerForKeyboardNotifications()
         buttonPressed.layer.cornerRadius = 7 // Радиус кнопки
         whiteMenuRectangle.layer.cornerRadius = 7
+        wrongCodeLabel.isHidden = true
+
     }
     
-// MARK: UIKeyboardInsert
+    // MARK: UIKeyboardInsert
     
     deinit {
         removeKeyboardNotifications()
@@ -56,6 +59,13 @@ class ConfirmationCode: UIViewController, UITextViewDelegate {
     
     @objc func kbWillHide() {
         scrollView.contentOffset = CGPoint.zero
+    }
+    
+    // MARK: Рабочие функции проверки
+    
+    func codeIsTrue () {
+        buttonPressed.backgroundColor = .black
+        buttonPressed.setTitleColor(.white, for: .normal) // .normal - состояние кнопки
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
