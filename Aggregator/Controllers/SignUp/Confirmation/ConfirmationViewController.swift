@@ -49,9 +49,9 @@ class ConfirmationViewController: UIViewController, UITextViewDelegate {
     }
 
     @objc func kbWillShow(_ notification: Notification) {
-        //let userInfo = notification.userInfo // получаем уведомление чтобы вытащить информацию
-        //let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue // узнаем размер клавиатуры
-        scrollView.contentOffset = CGPoint(x: 0, y: 220) // y: kbFrameSize.height - высота клавиатуры
+        let userInfo = notification.userInfo // получаем уведомление чтобы вытащить информацию
+        let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue // узнаем размер клавиатуры
+        scrollView.contentOffset = CGPoint(x: 0, y: kbFrameSize.height) // y: kbFrameSize.height - высота клавиатуры
     }
     
     @objc func kbWillHide() {
