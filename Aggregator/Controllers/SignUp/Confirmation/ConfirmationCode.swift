@@ -26,6 +26,8 @@ class ConfirmationCode: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customNavigationItem()
+        showNavigationBar()
         registerForKeyboardNotifications()
         buttonPressed.layer.cornerRadius = 7 // Радиус кнопки
         whiteMenuRectangle.layer.cornerRadius = 7
@@ -72,6 +74,19 @@ class ConfirmationCode: UIViewController, UITextViewDelegate {
         firstTextField.resignFirstResponder()
         secondTextField.resignFirstResponder()
     }
+    
+    // MARK: Кастомный NavigationBar
+    
+    func customNavigationItem() {
+        let label = UILabel()
+        label.text = "Подтверждение"
+        label.textColor = .white
+        label.font = UIFont(name: "Helvetica", size: 17)
+            
+        navigationItem.titleView = label
+
+    }
+    
 }
 
     

@@ -25,6 +25,8 @@ class ConfirmationViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showNavigationBar()
+        customNavigationItem()
         registerForKeyboardNotifications()
         buttonPressed.layer.cornerRadius = 7 // Радиус кнопки
         whiteMenuRectangle.layer.cornerRadius = 7
@@ -58,10 +60,22 @@ class ConfirmationViewController: UIViewController, UITextViewDelegate {
         scrollView.contentOffset = CGPoint.zero
     }
     
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         rightTextField.resignFirstResponder()
         leftTextField.resignFirstResponder()
     }
     
+    // MARK: Кастомный NavigationBar
+    
+    func customNavigationItem() {
+        let label = UILabel()
+        label.text = "Восстановление пароля"
+        label.textColor = .white
+        label.font = UIFont(name: "Helvetica", size: 17)
+            
+        navigationItem.titleView = label
+
+    }
 
 }

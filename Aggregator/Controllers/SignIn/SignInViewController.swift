@@ -14,7 +14,7 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var dataEmailPlaceholder: UITextField!
-    @IBOutlet weak var dataPasswodPlaceholder: UITextField!
+    @IBOutlet weak var dataPasswordPlaceholder: UITextField!
     @IBOutlet weak var whiteMenuRectangle: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollViewLogo: UIScrollView!
@@ -23,12 +23,19 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideNavigationBar()
         registerForKeyboardNotifications()
         loginButton.layer.cornerRadius = 7 // Радиус кнопки
         whiteMenuRectangle.layer.cornerRadius = 7
     }
     
-        // MARK: UIKeyboardInsert
+    // MARK: viewWillAppear
+    
+    override func viewWillAppear(_ animated: Bool) {
+        hideNavigationBar()
+    }
+    
+    // MARK: UIKeyboardInsert
     
     
     deinit {
@@ -59,10 +66,28 @@ class SignInViewController: UIViewController, UITextViewDelegate {
         scrollViewLogo.contentOffset = CGPoint.zero
     }
     
-
+    // MARK: IBActions
     
     @IBAction func buttonPressed(_ sender: Any) {
     }
+
+    
+}
+
+    // MARK: Расширение для кастомного NavigationBar
+
+extension UIViewController {
+    func hideNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    func showNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.shadowImage = UIImage ()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    }
+    // Расширение используется для всех viewControllers
 }
 
 
