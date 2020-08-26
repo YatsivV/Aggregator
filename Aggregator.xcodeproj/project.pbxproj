@@ -21,6 +21,7 @@
 		04930F5E24B9FC520086319B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04930F5D24B9FC520086319B /* Assets.xcassets */; };
 		04930F6124B9FC520086319B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04930F5F24B9FC520086319B /* LaunchScreen.storyboard */; };
 		04FCEF2C24F40D2C00B398A8 /* ConfirmationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCEF2B24F40D2C00B398A8 /* ConfirmationCode.swift */; };
+		04FD2D9124F6FA830002B314 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD2D9024F6FA830002B314 /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -375,6 +376,7 @@
 		04C8F09A24F2E3AF0072D5FA /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C8F09C24F2E3AF0072D5FA /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FCEF2B24F40D2C00B398A8 /* ConfirmationCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCode.swift; sourceTree = "<group>"; };
+		04FD2D9024F6FA830002B314 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		642734C939C2E4C480626AEC /* Pods_Aggregator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aggregator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D5D91D00A0FCDBD5529859 /* Pods-Aggregator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggregator.debug.xcconfig"; path = "Target Support Files/Pods-Aggregator/Pods-Aggregator.debug.xcconfig"; sourceTree = "<group>"; };
 		B79F28286E289223AADF650E /* Pods-Aggregator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggregator.release.xcconfig"; path = "Target Support Files/Pods-Aggregator/Pods-Aggregator.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,7 +405,6 @@
 				04930F5624B9FC510086319B /* AppDelegate.swift */,
 				04930F5D24B9FC520086319B /* Assets.xcassets */,
 				04930F6224B9FC520086319B /* Info.plist */,
-				04930F5F24B9FC520086319B /* LaunchScreen.storyboard */,
 				0448DA2624F2BA730019160B /* GoogleService-Info.plist */,
 			);
 			path = "Supporting files";
@@ -412,6 +413,7 @@
 		0448DA2524F2B8870019160B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04FD2D8F24F6FA500002B314 /* LaunchScreen */,
 				04FCEF2D24F419D100B398A8 /* SignIn */,
 				0483E0FF24CEEF3C00C7454D /* SignUp */,
 			);
@@ -469,6 +471,15 @@
 				04930F5824B9FC510086319B /* SignInViewController.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		04FD2D8F24F6FA500002B314 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04930F5F24B9FC520086319B /* LaunchScreen.storyboard */,
+				04FD2D9024F6FA830002B314 /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		54373A298492F1CA2E7331EE /* Frameworks */ = {
@@ -967,6 +978,7 @@
 				04FCEF2C24F40D2C00B398A8 /* ConfirmationCode.swift in Sources */,
 				04930F5924B9FC510086319B /* SignInViewController.swift in Sources */,
 				0483E10324D195FF00C7454D /* ConfirmationViewController.swift in Sources */,
+				04FD2D9124F6FA830002B314 /* LaunchScreenViewController.swift in Sources */,
 				04930F5724B9FC510086319B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

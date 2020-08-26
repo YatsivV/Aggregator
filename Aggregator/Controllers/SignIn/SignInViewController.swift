@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController, UITextViewDelegate {
     
@@ -18,6 +19,14 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var whiteMenuRectangle: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollViewLogo: UIScrollView!
+    @IBOutlet weak var warningButtonFirst: UIButton!
+    @IBOutlet weak var redShapeFirst: UIImageView!
+    @IBOutlet weak var warningLabelFirst: UILabel!
+    @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet weak var warningButtonSecond: UIButton!
+    @IBOutlet weak var redShapeSecond: UIImageView!
+    @IBOutlet weak var warningLabelSecond: UILabel!
+    
     
     // MARK: viewDidLoad
     
@@ -27,6 +36,8 @@ class SignInViewController: UIViewController, UITextViewDelegate {
         registerForKeyboardNotifications()
         loginButton.layer.cornerRadius = 7 // Радиус кнопки
         whiteMenuRectangle.layer.cornerRadius = 7
+        
+        warningButtonFirst.isHidden = true; warningButtonSecond.isHidden = true; redShapeFirst.isHidden = true; redShapeSecond.isHidden = true; warningLabelFirst.isHidden = true; warningLabelSecond.isHidden = true; showPasswordButton.isHidden = true
     }
     
     // MARK: viewWillAppear
@@ -66,9 +77,63 @@ class SignInViewController: UIViewController, UITextViewDelegate {
         scrollViewLogo.contentOffset = CGPoint.zero
     }
     
+    // MARK: Animation
+    
+    func warningLabel(withText text: String) {
+        warningLabelFirst.isHidden = false
+        warningLabelFirst.text = text
+        warningLabelFirst.alpha = 0
+        UIView.animate(withDuration: 0.6, delay: 1, options: .curveEaseInOut, animations: { [weak self] in
+            self?.warningLabelFirst.alpha = 1
+            }, completion: {_ in print("bla")
+        }
+        )}
+    
+    func warningButton() {
+        warningButtonFirst.isHidden = false
+        warningButtonFirst.alpha = 0
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+        self?.warningButtonFirst.alpha = 1
+        }) { _ in print("Animation Done") }
+    }
+    
+    func warningShape() {
+        redShapeFirst.isHidden = false
+        redShapeFirst.alpha = 0
+        redShapeFirst.center.x += 15
+        UIView.animate(withDuration: 1, delay: 0.7, options: .curveEaseInOut, animations: { [weak self] in
+            self?.redShapeFirst.center.x -= 15
+            self?.redShapeFirst.alpha = 1
+        }) {completion in
+            print ("Animation done")}
+    }
+    
+    func closeWarning() {
+        redShapeFirst.isHidden = true
+        warningButtonFirst.isHidden = true
+        warningLabelFirst.isHidden = true
+    }
+    
     // MARK: IBActions
     
     @IBAction func buttonPressed(_ sender: Any) {
+        guard let email = dataEmailPlaceholder.text, let password = dataPasswordPlaceholder.text, email != "", password != "" else {
+            warningButton()
+            warningShape()
+            warningLabel(withText: "Заполните поле")
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] (user, eror) in
+            if eror != nil {
+                self?.warningLabel(withText: "Произошла ошибка")
+                return
+            }
+            if user != nil {
+                self?.performSegue(withIdentifier: "mainMenuSegue", sender: nil)
+                return
+            }
+            self?.warningLabel(withText: "Несуществующий пользователь")
+        })
     }
 
     
