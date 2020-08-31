@@ -32,7 +32,6 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideNavigationBar()
         registerForKeyboardNotifications()
         loginButton.layer.cornerRadius = 7 // Радиус кнопки
         whiteMenuRectangle.layer.cornerRadius = 7
@@ -47,7 +46,6 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     }
     
     // MARK: UIKeyboardInsert
-    
     
     deinit {
         removeKeyboardNotifications()
@@ -77,7 +75,7 @@ class SignInViewController: UIViewController, UITextViewDelegate {
         scrollViewLogo.contentOffset = CGPoint.zero
     }
     
-    // MARK: Animation
+    // MARK: - Animation
     
     func warningLabel(withText text: String) {
         warningLabelFirst.isHidden = false

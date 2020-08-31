@@ -1398,7 +1398,8 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="signUpButton:" destination="BSE-BX-RKp" eventType="touchUpInside" id="dnk-dZ-E2h"/>
+                                                    <action selector="createAccount:" destination="BSE-BX-RKp" eventType="touchUpInside" id="Hak-Wa-fyB"/>
+                                                    <segue destination="UwP-67-EHx" kind="show" identifier="createAccountDone" id="b7p-cd-YEy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wN-Ou-dIf">
@@ -1408,7 +1409,7 @@
                                                     <color key="titleColor" red="0.38039600849999999" green="0.38038712740000002" blue="0.38038891549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="iHaveAnAccount:" destination="BSE-BX-RKp" eventType="touchUpInside" id="iNL-a6-HXo"/>
+                                                    <action selector="iHaveAnAccountAlready:" destination="BSE-BX-RKp" eventType="touchUpInside" id="JnU-ub-Zrf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1461,15 +1462,14 @@
                     <connections>
                         <outlet property="EmailPlaceholder" destination="Fem-WE-Z0D" id="Yz2-dW-pNK"/>
                         <outlet property="PasswordPlaceholder" destination="Lk4-ei-1OQ" id="8xG-Rg-13Z"/>
-                        <outlet property="emailPlaceholder" destination="Fem-WE-Z0D" id="coW-GJ-EVY"/>
+                        <outlet property="createAccount" destination="hM9-bc-vmz" id="leJ-Oz-jcb"/>
+                        <outlet property="emailPlaceholder" destination="Fem-WE-Z0D" id="mP7-PO-ny2"/>
+                        <outlet property="iHaveAnAccountAlready" destination="5wN-Ou-dIf" id="3ru-NQ-Utg"/>
                         <outlet property="loginPlaceholder" destination="V5y-VL-oOK" id="vl0-5q-7C6"/>
-                        <outlet property="passwordPlaceholder" destination="Lk4-ei-1OQ" id="En9-vZ-yXg"/>
-                        <outlet property="scrollView" destination="GPz-7q-J4d" id="fkf-Jt-GMg"/>
-                        <outlet property="scrollViewLogo" destination="cLy-pK-HtS" id="v2V-JR-2xl"/>
-                        <outlet property="showPasswordButton" destination="VZT-8b-Y7c" id="pL7-n4-7Sc"/>
-                        <outlet property="signUpButton" destination="hM9-bc-vmz" id="BNG-la-BVC"/>
+                        <outlet property="passwordPlaceholder" destination="Lk4-ei-1OQ" id="cDA-ma-qR0"/>
+                        <outlet property="scrollView" destination="GPz-7q-J4d" id="rDX-l3-6S8"/>
+                        <outlet property="scrollViewLogo" destination="cLy-pK-HtS" id="whg-4h-S8B"/>
                         <outlet property="whiteMenuRectangle" destination="sMC-wt-qGB" id="Ddz-kl-Dkl"/>
-                        <segue destination="UwP-67-EHx" kind="show" identifier="mainMenuNewAccountSegue" id="UgG-bn-MKR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGt-77-W9y" sceneMemberID="firstResponder"/>
@@ -1499,7 +1499,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mNU-D5-Xz4"/>
+        <segue reference="b7p-cd-YEy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="OvalBackground" width="80" height="106"/>
